@@ -89,6 +89,7 @@ function copyImg() {
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.svgo()
     ]))
+    .pipe(src(['src/img/**/*.{mp4,webm}']))
     .pipe(dest('build/img'));
 }
 exports.copyImg = copyImg;
