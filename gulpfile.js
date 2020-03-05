@@ -30,7 +30,7 @@ const server = require('browser-sync').create();
 let isDev = !process.env.NODE_ENV || process.env.NODE_ENV === 'dev';
 
 function processSass() {
-  return src('source/sass/style.scss', { sourcemaps: true })
+  return src('src/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -45,7 +45,7 @@ function processSass() {
 exports.processSass = processSass;
 
 function processHtml() {
-  return src('source/*.html')
+  return src('src/*.html')
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
@@ -60,9 +60,9 @@ function buildJs() {
     'node_modules/svg4everybody/dist/svg4everybody.min.js'
   ])
     .pipe(src([
-      'source/js/lib/**/*.js',
-      'source/js/utils/**/*.js',
-      'source/js/script.js'], { sourcemaps: true }))
+      'src/js/lib/**/*.js',
+      'src/js/utils/**/*.js',
+      'src/js/script.js'], { sourcemaps: true }))
     .pipe(plumber())
     .pipe(babel({
       presets: ['@babel/env'],
@@ -77,13 +77,13 @@ function buildJs() {
 exports.buildJs = buildJs;
 
 function copyFonts() {
-  return src('source/fonts/**/*.{woff,woff2}')
+  return src('src/fonts/**/*.{woff,woff2}')
     .pipe(dest('build/fonts'));
 }
 exports.copyFonts = copyFonts;
 
 function copyImg() {
-  return src(['source/img/**/*.{jpg,jpeg,png,svg,webp}', '!source/img/sprites/**/*.{jpg,jpeg,png,svg,webp}'])
+  return src(['src/img/**/*.{jpg,jpeg,png,svg,webp}', '!src/img/sprites/**/*.{jpg,jpeg,png,svg,webp}'])
     .pipe(imagemin([
       imagemin.jpegtran({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -94,7 +94,7 @@ function copyImg() {
 exports.copyImg = copyImg;
 
 function generateSvgSprite() {
-  return src('source/img/sprites/svg/*.svg')
+  return src('src/img/sprites/svg/*.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -127,12 +127,12 @@ function serve() {
     ui: false
   });
 
-  watch('source/sass/**/*.{scss,sass}', series(processSass));
-  watch('source/*.html', series(processHtml, reload));
-  watch('source/js/**/*.js', series(buildJs, reload));
-  watch(['source/img/**/*.{jpg,jpeg,png,svg,webp}', '!source/img/sprites/**/*.svg'], series(copyImg, reload));
-  watch('source/img/sprites/svg/*.svg', series(generateSvgSprite, reload));
-  watch('source/fonts/**/*.{woff,woff2}', series(copyFonts, reload));
+  watch('src/sass/**/*.{scss,sass}', series(processSass));
+  watch('src/*.html', series(processHtml, reload));
+  watch('src/js/**/*.js', series(buildJs, reload));
+  watch(['src/img/**/*.{jpg,jpeg,png,svg,webp}', '!src/img/sprites/**/*.svg'], series(copyImg, reload));
+  watch('src/img/sprites/svg/*.svg', series(generateSvgSprite, reload));
+  watch('src/fonts/**/*.{woff,woff2}', series(copyFonts, reload));
 }
 exports.serve = serve;
 
