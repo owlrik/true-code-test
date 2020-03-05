@@ -1,0 +1,25 @@
+.start-price {
+  font-weight: 600;
+  color: $color-accent;
+}
+
+.start-price__row {
+  display: block;
+  text-transform: lowercase;
+
+  &--from {
+    margin-bottom: -5px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &--cost {
+    font-size: 44px;
+  }
+
+  &--period {
+    margin-top: -3px;
+    font-size: 18px;
+    text-align: right;
+  }
+}

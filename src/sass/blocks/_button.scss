@@ -1,0 +1,24 @@
+.button {
+  position: relative;
+  display: inline-block;
+  max-width: 300px;
+  padding: 12px 10px 9px;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  vertical-align: middle;
+  text-align: center;
+  color: $text-color--lighter;
+  text-transform: none;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: normal;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  border: 1px solid #fbd407;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}

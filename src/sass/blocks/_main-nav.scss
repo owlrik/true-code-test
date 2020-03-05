@@ -1,0 +1,28 @@
+.main-nav {
+//
+}
+
+.main-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  margin-right: 100px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding: 15px 0;
+  font-size: 24px;
+  text-align: center;
+  color: $text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+}

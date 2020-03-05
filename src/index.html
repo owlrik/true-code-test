@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Отель-заповедник «Лесное» — премиальный отдых в Подмосковье</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="page-header">
@@ -39,8 +40,9 @@
       <div class="head__info">
         <div class="head__title-wrapper">
           <h1 class="head__title">
-            <span>Отель-заповедник</span>
+            <span class="head__title-description">Отель-заповедник</span>
             <span class="visually-hidden">«Лесное»</span>
+            <img class="head__title-img" src="img/title-main.png" width="816" height="331" alt="">
           </h1>
           <h2 class="head__subtitle">
             Премиальный отдых в Подмосковье
@@ -50,7 +52,7 @@
         <div class="head__description">
           <p class="start-price  head__start-price">
             <span class="start-price__row  start-price__row--from">От</span>
-            <span class="start-price__row  start-price__row--cost">5 500</span>
+            <span class="start-price__row  start-price__row--cost">5 500 ₽</span>
             <span class="start-price__row  start-price__row--period">в сутки</span>
           </p>
 
@@ -62,38 +64,41 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="booking  head__booking">
-        <div class="booking__inner">
+    <div class="booking  head__booking">
+      <div class="booking__inner">
 
-          <form class="form-booking  head__form-booking" method="post" action="#">
-            <h2 class="form-booking__title">Бронирование номеров</h2>
+        <form class="form-booking  head__form-booking" method="post" action="#">
+          <h2 class="form-booking__title">Бронирование номеров</h2>
 
-            <div class="field-text  form-booking__field-text">
-              <label class="field-text__label">
-                <span>Заезд</span>
-                <input class="field-text__input" type="text" name="check-in">
-              </label>
-            </div>
+          <div class="field-text  field-text--date  form-booking__field-text">
+            <label class="field-text__label">
+              <span>Заезд</span>
+              <input class="field-text__input" type="text" name="check-in">
+            </label>
+          </div>
 
-            <div class="field-text  form-booking__field-text">
-              <label class="field-text__label">
-                <span>Выезд</span>
-                <input class="field-text__input" type="text" name="check-out">
-              </label>
-            </div>
+          <div class="field-text  field-text--date  form-booking__field-text">
+            <label class="field-text__label">
+              <span>Выезд</span>
+              <input class="field-text__input" type="text" name="check-out">
+            </label>
+          </div>
 
-            <div class="field-text  form-booking__field-text">
-              <label class="field-text__label">
-                <span>Гости</span>
-                <input class="field-text__input" type="text" name="guest-count" value="1">
-              </label>
-            </div>
+          <div class="field-text  field-text--guest-count  form-booking__field-text  form-booking__field-text--small">
+            <label class="field-text__label">
+              <span>Гости</span>
+              <input class="field-text__input" type="text" name="guest-count" value="1">
+            </label>
+          </div>
 
-            <div class="form-booking__submit">
-              <button class="form-booking__button" type="submit">Найти номер</button>
-            </div>
-          </form>
+          <div class="form-booking__submit">
+            <button class="button  form-booking__button" type="submit">Найти номер</button>
+          </div>
+        </form>
+
+        <div class="booking__ribbon">
         </div>
       </div>
     </div>
