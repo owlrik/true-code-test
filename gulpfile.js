@@ -11,6 +11,7 @@ const posthtml = require('gulp-posthtml');
 const include = require('posthtml-include');
 const htmlmin = require('gulp-htmlmin');
 
+const webpackStream = require('webpack-stream');
 const terser = require('gulp-terser');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
@@ -54,25 +55,28 @@ function processHtml() {
 exports.processHtml = processHtml;
 
 function buildJs() {
-  return src([
-    'node_modules/picturefill/dist/picturefill.min.js',
-    'node_modules/object-fit-images/dist/ofi.min.js',
-    'node_modules/svg4everybody/dist/svg4everybody.min.js'
-  ])
-    .pipe(src([
-      'src/js/lib/**/*.js',
-      'src/js/utils/**/*.js',
-      'src/js/script.js'], { sourcemaps: true }))
+  return src('src/js/script.js')
     .pipe(plumber())
-    .pipe(babel({
-      presets: ['@babel/env'],
-      ignore: ['node_modules']
+    .pipe(webpackStream({
+      mode: 'production',
+      entry: './src/js/script.js',
+      output: {
+        filename: '[name].js',
+      },
+      module: {
+        rules: [
+          {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        ]
+      },
     }))
-    .pipe(concat('script.js'))
-    .pipe(dest('build/js'))
-    .pipe(terser())
-    .pipe(rename('script.min.js'))
-    .pipe(gulpIf(isDev, dest('build/js', { sourcemaps: '.' }), dest('build/js')));
+    .pipe(dest('build/js'));
 }
 exports.buildJs = buildJs;
 

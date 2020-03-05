@@ -75,21 +75,21 @@
           <div class="field-text  field-text--date  form-booking__field-text">
             <label class="field-text__label">
               <span>Заезд</span>
-              <input class="field-text__input" type="text" name="check-in">
+              <input class="field-text__input  input-date  date-start" type="text" name="check-in" placeholder="06.03.2020">
             </label>
           </div>
 
           <div class="field-text  field-text--date  form-booking__field-text">
             <label class="field-text__label">
               <span>Выезд</span>
-              <input class="field-text__input" type="text" name="check-out">
+              <input class="field-text__input  input-date  date-end" type="text" name="check-out" placeholder="06.03.2020">
             </label>
           </div>
 
           <div class="field-text  field-text--guest-count  form-booking__field-text  form-booking__field-text--small">
             <label class="field-text__label">
               <span>Гости</span>
-              <input class="field-text__input" type="text" name="guest-count" value="1">
+              <input class="field-text__input  input-guests-count" type="text" name="guest-count" value="1">
             </label>
           </div>
 
@@ -110,7 +110,7 @@
                 .cls-1 {
                   fill: #eeeeee;
                   fill-rule: evenodd;
-                  filter: url(#filter);
+                  filter: url("#filter");
                 }
               </style>
 
@@ -134,5 +134,8 @@
       </div>
     </div>
   </section>
+
+<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+  <script src="js/main.js"></script>
 </body>
 </html>
