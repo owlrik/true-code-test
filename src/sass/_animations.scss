@@ -1,0 +1,29 @@
+@keyframes welcomeSectionAnimate1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeSectionAnimate2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 24px;
+  }
+}
+
+@keyframes welcomeSectionAnimate3 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -48,6 +48,7 @@
   flex-direction: column;
   margin-bottom: 90px;
   color: $text-color--lighter;
+  animation: welcomeSectionAnimate1 1s ease 1s both;
 
   @media (max-width: $screen-xl) {
     margin-bottom: 70px;
@@ -161,6 +162,7 @@
     width: 24px;
     height: 237px;
     background: url("../img/border-decor.png");
+    animation: welcomeSectionAnimate2 0.3s ease 1.5s both;
 
     @media (max-width: $screen-md) {
       transform: scale(0.8) translateY(-15px);
@@ -180,6 +182,7 @@
 
 .head__conditions {
   max-width: 353px;
+  animation: welcomeSectionAnimate3 1s ease 2.2s both;
 }
 
 .head__conditions p {
