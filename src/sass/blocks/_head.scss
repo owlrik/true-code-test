@@ -10,6 +10,22 @@
   max-width: 1728px;
   margin: 0 auto;
   padding: 164px 25px 0;
+
+  @media (max-width: $screen-xl) {
+    max-width: 960px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @media (max-width: $screen-md) {
+    z-index: auto;
+    max-width: 660px;
+    padding-top: 140px;
+  }
+
+  @media (max-width: $screen-xs) {
+    max-width: 320px;
+  }
 }
 
 .head__info {
@@ -17,6 +33,14 @@
   max-width: 980px;
   margin-left: auto;
   padding-left: 37px;
+
+  @media (max-width: $screen-xl) {
+    padding-left: 40%;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-left: 0;
+  }
 }
 
 .head__title-wrapper {
@@ -24,6 +48,14 @@
   flex-direction: column;
   margin-bottom: 90px;
   color: $text-color--lighter;
+
+  @media (max-width: $screen-xl) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-bottom: 50px;
+  }
 }
 
 .head__title {
@@ -31,16 +63,44 @@
   margin: 0;
   font-weight: 400;
   font-size: 34px;
+
+  @media (max-width: $screen-xl) {
+    font-size: 24px;
+  }
 }
 
 .head__title-description {
   display: block;
   margin-bottom: 10px;
   margin-left: 66px;
+
+  @media (max-width: $screen-xl) {
+    margin-left: 20px;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-left: 0;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-left: 10px;
+  }
+
+  @media (max-width: $screen-xs) {
+    margin-left: 0;
+  }
 }
 
 .head__title-img {
   display: inline-block;
+
+  @media (max-width: $screen-xl) {
+    width: 450px;
+  }
+
+  @media (max-width: $screen-xs) {
+    width: 280px;
+  }
 }
 
 .head__subtitle {
@@ -49,6 +109,22 @@
   font-weight: 300;
   font-size: 51px;
   text-align: right;
+
+  @media (max-width: $screen-lg) {
+    max-width: 450px;
+    margin-top: 10px;
+    font-size: 40px;
+  }
+
+  @media (max-width: $screen-sm) {
+    padding-left: 80px;
+    font-size: 30px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding-left: 70px;
+    font-size: 30px;
+  }
 }
 
 .head__description {
@@ -57,6 +133,24 @@
   padding-top: 12px;
   padding-left: 54px;
   font-family: $font-family-montserrat;
+
+  @media (max-width: $screen-xl) {
+    margin-left: 150px;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-left: 80px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+
+  @media (max-width: $screen-xs) {
+    padding: 0;
+  }
 
   &::before {
     content: "";
@@ -67,6 +161,14 @@
     width: 24px;
     height: 237px;
     background: url("../img/border-decor.png");
+
+    @media (max-width: $screen-md) {
+      transform: scale(0.8) translateY(-15px);
+    }
+
+    @media (max-width: $screen-sm) {
+      content: none;
+    }
   }
 }
 
@@ -91,4 +193,17 @@
 
 .head__form-booking {
   position: relative;
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media (max-width: $screen-lg) {
+    margin-top: 140px;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-top: 420px;
+  }
 }

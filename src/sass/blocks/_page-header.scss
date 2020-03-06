@@ -5,17 +5,34 @@
   z-index: 10;
   width: 100%;
   padding: 50px 0;
+
+  @media (max-width: $screen-md) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $white;
+  }
 }
 
 .page-header__inner {
+  position: relative;
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   align-items: center;
   padding: 0 17px;
 }
 
 .page-header__contacts {
   margin-left: 100px;
+
+  @media (max-width: $screen-xl) {
+    margin-left: 60px;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 
 .page-header__phone {
@@ -28,4 +45,15 @@
   text-decoration: none;
   border: 1px solid $color-accent;
   border-radius: 10px;
+
+  @media (max-width: $screen-xl) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-md) {
+    padding-right: 0;
+    padding-left: 0;
+    border: none;
+    border-radius: 0;
+  }
 }

@@ -1,5 +1,31 @@
 .booking {
-  //
+  @media (max-width: $screen-xl) {
+    position: relative;
+    z-index: 10;
+    background-color: #d3c1a2;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      background-color: #c5ac84;
+    }
+
+    &::before {
+      top: -4px;
+    }
+
+    &::after {
+      bottom: -4px;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    background-color: transparent;
+  }
 }
 
 .booking__inner {
@@ -9,6 +35,19 @@
   margin: 0 auto;
   padding-right: 0;
   padding-left: 172px;
+
+  @media (max-width: $screen-xl) {
+    max-width: 960px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $screen-md) {
+    max-width: 768px;
+  }
+
+  @media (max-width: $screen-xs) {
+    max-width: 320px;
+  }
 
   &::before,
   &::after {
@@ -24,11 +63,25 @@
   &::before {
     top: -4px;
     transform: translate(50%, -100%);
+
+    @media (max-width: $screen-xl) {
+      transform: translate(-50%, -100%);
+    }
   }
 
   &::after {
     bottom: -4px;
     transform: translate(50%, 100%) rotate(180deg);
+
+    @media (max-width: $screen-xl) {
+      top: 31px;
+      transform: translate(-50%, 100%) rotate(180deg);
+    }
+
+    @media (max-width: $screen-xl) {
+      top: auto;
+      transform: translate(-50%, 100%) rotate(180deg);
+    }
   }
 }
 
@@ -40,6 +93,10 @@
   height: 100%;
   background-color: #d3c1a2;
   transform: translate(100%, 0);
+
+  @media (max-width: $screen-xl) {
+    display: none;
+  }
 
   &::before,
   &::after {

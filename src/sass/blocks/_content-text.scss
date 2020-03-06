@@ -6,4 +6,8 @@
   font-size: 18px;
   line-height: 1.6;
   color: $text-color--lighter;
+
+  @media (max-width: $screen-md) {
+    font-size: 14px;
+  }
 }

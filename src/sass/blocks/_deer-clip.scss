@@ -7,6 +7,30 @@
   height: 1597px;
   pointer-events: none;
   clip-path: url("#clippath");
+
+  @media (max-width: $screen-xl) {
+    width: 953px;
+    height: 1297px;
+  }
+
+  @media (max-width: $screen-lg) {
+    bottom: 140px;
+    left: 20px;
+    width: 50%;
+    height: 320px;
+    clip-path: none;
+  }
+
+  @media (max-width: $screen-md) {
+    width: 48%;
+  }
+
+  @media (max-width: $screen-sm) {
+    right: 0;
+    bottom: 400px;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .deer-clip__video {
@@ -19,4 +43,23 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
+
+  @media (max-width: $screen-xl) {
+    width: 953px;
+    height: 1297px;
+  }
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
+}
+
+.deer-clip__svg clipPath {
+  @media (max-width: 1200px) {
+    transform: scale(0.7) translate(0, 0);
+  }
+
+  @media (max-width: $screen-lg) {
+    display: none;
+  }
 }

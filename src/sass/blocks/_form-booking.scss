@@ -8,6 +8,12 @@
   color: $text-color--lighter;
   background-color: #d3c1a2;
 
+  @media (max-width: $screen-sm) {
+    flex-direction: column;
+    background-color: transparent;
+    padding-bottom: 20px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -16,6 +22,10 @@
     height: 2px;
     left: 0;
     background-color: #c5ac84;
+
+    @media (max-width: $screen-xl) {
+      content: none;
+    }
   }
 
   &::before {
@@ -28,6 +38,8 @@
 }
 
 .form-booking__title {
+  position: relative;
+  z-index: 10;
   flex-shrink: 0;
   margin: 0;
   margin-right: 30px;
@@ -35,23 +47,70 @@
   font-size: 30px;
   font-family: $font-family-bebas;
   color: $text-color;
+
+  @media (max-width: $screen-lg) {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
 }
 
 .form-booking__field-text {
   width: 161px;
+  flex-shrink: 1;
+
+  @media (max-width: $screen-md) {
+    width: 140px;
+  }
+
+  @media (max-width: $screen-sm) {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
 
   &--small {
     width: 85px;
+
+    @media (max-width: $screen-sm) {
+      width: 100%;
+      max-width: 300px;
+    }
   }
 }
 
 .form-booking__field-text + .form-booking__field-text {
   margin-left: 23px;
+
+  @media (max-width: $screen-lg) {
+    margin-left: 15px;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-left: 0;
+  }
 }
 
 .form-booking__button {
+  flex-shrink: 1;
   width: 180px;
   margin-left: 23px;
   background-color: #fbd407;
   box-shadow: 0 5px 6px 0 rgba(87, 91, 124, 0.45);
+
+  @media (max-width: $screen-lg) {
+    width: 120px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-left: 0;
+  }
 }

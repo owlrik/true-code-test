@@ -1,16 +1,41 @@
 .main-nav {
-//
+  //
+}
+
+.main-nav__trigger {
+  position: absolute;
+  top: -17px;
+  right: 5px;
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: $screen-md) {
+    display: none;
+  }
 }
 
 .main-nav__item {
   margin-right: 100px;
+
+  @media (max-width: $screen-xxl) {
+    margin-right: 80px;
+  }
+
+  @media (max-width: $screen-xl) {
+    margin-right: 60px;
+  }
+
+  @media (max-width: $screen-md) {
+    margin-right: 0;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -25,4 +50,9 @@
   color: $text-color;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (max-width: $screen-xl) {
+    padding: 10px 0;
+    font-size: 18px;
+  }
 }

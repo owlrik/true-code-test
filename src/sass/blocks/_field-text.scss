@@ -1,5 +1,5 @@
 .field-text {
-//
+  //
 }
 
 .field-text--date .field-text__label {
@@ -12,6 +12,10 @@
     width: 23px;
     height: 23px;
     background: url("../img/icon-calendar.svg") no-repeat;
+
+    @media (max-width: $screen-md) {
+      left: 10px;
+    }
   }
 }
 
@@ -25,11 +29,19 @@
     width: 19px;
     height: 19px;
     background: url("../img/icon-user.svg") no-repeat;
+
+    @media (max-width: $screen-md) {
+      left: 10px;
+    }
   }
 }
 
 .field-text--guest-count .field-text__label span {
   left: 41px;
+
+  @media (max-width: $screen-md) {
+    left: 35px;
+  }
 }
 
 .field-text__label {
@@ -45,6 +57,10 @@
   font-size: 12px;
   font-family: $font-family-montserrat;
   color: $text-color--lighter;
+
+  @media (max-width: $screen-md) {
+    left: 45px;
+  }
 }
 
 .field-text__input {
@@ -57,4 +73,10 @@
   color: $text-color--lighter;
   border: none;
   border-radius: 3px;
+
+  @media (max-width: $screen-md) {
+    padding-right: 5px;
+    padding-left: 45px;
+    font-size: 14px;
+  }
 }
