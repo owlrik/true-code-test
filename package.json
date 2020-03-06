@@ -1,11 +1,11 @@
 {
   "name": "true-code-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Тестовое задание для компании True.code",
   "author": "Vadim Tiuriumin",
   "repository": {
     "type": "git",
-    "url": "git@github.com:owlrik/true-code--test.git"
+    "url": "git@github.com:owlrik/true-code-test.git"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
