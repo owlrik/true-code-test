@@ -1,25 +1,34 @@
 .show-main-nav {
-  //&--closed .main-nav__list {
-  //  @media (max-width: $screen-md) {
-  //    display: none;
-  //  }
-  //}
   //
-  //&--closed .page-header__contacts {
-  //  @media (max-width: $screen-md) {
-  //    display: none;
-  //  }
-  //}
-  //
-  //&--opened .main-nav__list {
-  //  @media (max-width: $screen-md - 1) {
-  //    position: absolute;
-  //    top: 100%;
-  //    right: 0;
-  //    left: 0;
-  //    z-index: 10;
-  //  }
-  //}
+}
+
+.show-main-nav .trigger {
+  width: 65px;
+}
+
+.show-main-nav .trigger > span {
+  width: 28px;
+  background-color: transparent;
+  transition: background 0.3s 0s;
+
+  &::before,
+  &::after {
+    top: 0;
+    width: 28px;
+    transition: top 0.3s, transform 0.3s 0.5s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.show-main-nav .trigger:hover > span {
+  background-color: transparent;
 }
 
 .show-main-nav .main-nav__list {
