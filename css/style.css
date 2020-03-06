@@ -1453,6 +1453,25 @@ input[type="radio"].visually-hidden {
     top: calc(50% + 1px);
     left: calc(50% - 1px); }
 
+.show-main-nav .trigger {
+  width: 65px; }
+
+.show-main-nav .trigger > span {
+  width: 28px;
+  background-color: transparent;
+  transition: background 0.3s 0s; }
+  .show-main-nav .trigger > span::before, .show-main-nav .trigger > span::after {
+    top: 0;
+    width: 28px;
+    transition: top 0.3s, transform 0.3s 0.5s; }
+  .show-main-nav .trigger > span::before {
+    transform: rotate(45deg); }
+  .show-main-nav .trigger > span::after {
+    transform: rotate(-45deg); }
+
+.show-main-nav .trigger:hover > span {
+  background-color: transparent; }
+
 @media (max-width: 768px) {
   .show-main-nav .main-nav__list {
     position: absolute;
